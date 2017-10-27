@@ -93,7 +93,7 @@ int			main(int ac, char **av)
 		e.fract = ft_atoi(av[1]);
 	else
 		ft_error();
-	e.mlx = mlx_init(e);
+	e.mlx = mlx_init();
 	e.win = mlx_new_window(e.mlx, X, Y, "FRACTOL");
 	init_val(&e);
 	change(&e);
