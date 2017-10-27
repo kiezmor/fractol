@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/27 14:33:38 by vpluchar          #+#    #+#              #
-#    Updated: 2017/10/27 16:42:44 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/10/27 17:05:45 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,16 +37,16 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C libft/
-	$(GCC) $(FRAM) -o $(NAME) $(INC) $(OBJ) -L$(LIB) -lft
+	@$(GCC) $(FRAM) -o $(NAME) $(INC) $(OBJ) -L$(LIB) -lft
 	@echo "\033[0;33;32mmake Fractol"
 
 $(DOBJ)/%.o:%.c
 	@mkdir -p $(ODIR) 
-	$(GCC) $(INC) -c $< -o $@
+	@$(GCC) $(INC) -c $< -o $@
 
 clean:
 	@make clean -C $(LIB)
-	@rm -rf $(ODIR)
+	@rm -rf $(DOBJ)
 
 fclean: clean
 	@rm -rf $(NAME)
