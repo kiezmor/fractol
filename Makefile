@@ -6,17 +6,18 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/27 14:33:38 by vpluchar          #+#    #+#              #
-#    Updated: 2017/10/27 14:33:38 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/10/27 16:42:44 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fractol
 
-HEAD = fractol.h
-
-INC = -I./inc/
+INC = -I./libft/includes/ -I./inc/
 
 LIB = libft/
+
+DOBJ	=	obj
+SDIR = src
 
 SRC = src/fractol.c \
 	  src/fractale.c \
@@ -25,23 +26,27 @@ SRC = src/fractol.c \
 	  src/key.c \
 	  src/menu.c
 
-GCC = gcc -Wall -Wextra -Werror -lmlx -framework OpenGL -framework Appkit
+GCC = gcc -Wall -Wextra -Werror
 
-OBJ = $(SRC:.c=.o)
+FRAM = -lmlx -framework OpenGL -framework Appkit
+
+OBJ 	=	$(patsubst %.c, $(DOBJ)/%.o, $(SRC))
+ODIR	=	$(addprefix $(DOBJ)/, $(SDIR))
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C libft/
-	@$(GCC) -o $(NAME) $(INC) $(OBJ) -L$(LIB) -lft
+	$(GCC) $(FRAM) -o $(NAME) $(INC) $(OBJ) -L$(LIB) -lft
 	@echo "\033[0;33;32mmake Fractol"
 
-%.o: %.c $(HEAD)
-	@$(GCC) $(INC) -c $<
+$(DOBJ)/%.o:%.c
+	@mkdir -p $(ODIR) 
+	$(GCC) $(INC) -c $< -o $@
 
 clean:
 	@make clean -C $(LIB)
-	@rm -rf $(OBJ)
+	@rm -rf $(ODIR)
 
 fclean: clean
 	@rm -rf $(NAME)

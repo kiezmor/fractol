@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 14:30:23 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/10/27 14:30:23 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/27 16:55:07 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,7 @@ int			key(int key, t_env *e)
 	e->i += (key == P_ITERATION) ? 5 : 0;
 	e->i -= (key == N_ITERATION) ? 5 : 0;
 	(key == RESET) ? init_val(e) : 0;
-	if (key == CHANGE)
-	{
-		if (e->fract < 9)
-			e->fract++;
-		else
-			e->fract = 1;
-		init_val(e);
-	}
+	swap(key, e);
 	change(e);
 	(key == ESC) ? exit(2) : 0;
 	return (0);

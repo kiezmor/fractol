@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   factol.h                                           :+:      :+:    :+:   */
+/*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 14:28:47 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/10/27 14:28:47 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/27 16:57:09 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@
 # include <math.h>
 # include <pthread.h>
 
-# define Y 400
-# define X 400
+# define Y 720
+# define X 1080
 # define ESC 53
 # define P_ITERATION 83
 # define N_ITERATION 86
 # define RESET 84
 # define CHANGE 85
+# define PREV 88
 # define BLOC 85
 # define IN 5
 # define OUT 4
@@ -92,5 +93,6 @@ void				fractale_jul(t_env *e);
 void				fractale_tricorn(t_env *e);
 void				fractale_mandelbar4(t_env *e, float tmp,
 					float rz, float iz);
+void				swap(int key, t_env *e);
 
 #endif
