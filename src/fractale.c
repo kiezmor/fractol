@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "factol.h"
+#include "fractol.h"
 
 void			fractale_man(t_env *e)
 {

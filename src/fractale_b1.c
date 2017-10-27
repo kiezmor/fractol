@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "factol.h"
+#include "fractol.h"
 
 void			fractale_mandelbar4(t_env *e, float tmp, float rz, float iz)
 {
