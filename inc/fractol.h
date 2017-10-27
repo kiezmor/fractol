@@ -80,8 +80,8 @@ void				win(t_env *e);
 void				submit_change(t_env *e);
 void				fractale_function(t_env *e);
 
-void				fractale_newton(t_env *e, float r, float tmp);
-void				fractale_newton_love(t_env *e, float r, float tmp);
+void				fractale_newton(t_env *e, float tmp);
+void				fractale_newton_love(t_env *e, float tmp);
 
 void				fractale_neg(t_env *e);
 void				fractale_man(t_env *e);

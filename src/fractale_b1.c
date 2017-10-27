@@ -84,7 +84,7 @@ static float	calcul(t_env *e, float tmp)
 	return (tmp);
 }
 
-void			fractale_newton_love(t_env *e, float r, float tmp)
+void			fractale_newton_love(t_env *e, float tmp)
 {
 	e->x = -1;
 	while (++e->x < X)
