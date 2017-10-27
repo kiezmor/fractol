@@ -25,9 +25,9 @@ void		fractale_function(t_env *e)
 	else if (e->fract == 5)
 		fractale_man4(e, 0, 0, 0);
 	else if (e->fract == 6)
-		fractale_newton_love(e, 0, 0);
+		fractale_newton_love(e, 0);
 	else if (e->fract == 7)
-		fractale_newton(e, 0, 0);
+		fractale_newton(e, 0);
 	else if (e->fract == 8)
 		fractale_tricorn(e);
 	else
