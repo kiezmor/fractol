@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "factol.h"
+#include "fractol.h"
 
 void		put_pixel(int x, int y, t_env *e)
 {

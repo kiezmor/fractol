@@ -14,6 +14,8 @@ NAME = fractol
 
 HEAD = fractol.h
 
+INC = -I./inc/
+
 LIB = libft/
 
 SRC = src/fractol.c \
@@ -31,11 +33,11 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C libft/
-	@$(GCC) -o $(NAME) $(OBJ) -L$(LIB) -lft
+	@$(GCC) -o $(NAME) $(INC) $(OBJ) -L$(LIB) -lft
 	@echo "\033[0;33;32mmake Fractol"
 
 %.o: %.c $(HEAD)
-	@$(GCC)  -c $<
+	@$(GCC) $(INC) -c $<
 
 clean:
 	@make clean -C $(LIB)
