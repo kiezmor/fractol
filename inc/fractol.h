@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 14:28:47 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/10/27 16:57:09 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/28 18:24:29 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 # define P_ITERATION 83
 # define N_ITERATION 86
 # define RESET 84
-# define CHANGE 85
+# define NEXT 85
 # define PREV 88
 # define BLOC 85
 # define IN 5
